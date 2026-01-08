@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Divya ❤️</title>
+
+<!-- Jellyka font -->
+<link href="https://fonts.cdnfonts.com/css/jellyka-delicious-cake" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#fdfdfd;
+  overflow:hidden;
+}
+
+/* Opening Screen */
+#opening{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Jellyka Delicious Cake', cursive;
+  font-size:2.8em;
+  color:#cfa67d;
+  animation:fadeOut 3s ease forwards;
+  animation-delay:2.5s;
+  z-index:10;
+}
+
+@keyframes fadeOut{
+  to{opacity:0; visibility:hidden;}
+}
+
+/* Main Card */
+.card{
+  display:flex;
+  max-width:900px;
+  margin:80px auto;
+  background:#ffffff;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.1);
+  padding:40px;
+  animation:fadeIn 2s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1;}
+}
+
+.photo img{
+  width:300px;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+.content{
+  padding-left:40px;
+}
+
+.content h1{
+  font-family:'Jellyka Delicious Cake', cursive;
+  color:#cfa67d;
+  font-size:3em;
+  margin-bottom:10px;
+}
+
+.content p{
+  font-size:1.15em;
+  color:#555;
+  line-height:1.7;
+}
+
+/* Falling petals */
+.petal{
+  position:fixed;
+  top:-10px;
+  width:20px;
+  height:20px;
+  background:rgba(255,182,193,0.7);
+  border-radius:50%;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="opening">Happy Birthday, My Love ❤️</div>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_6b6a2b4b9a.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+  <div class="photo">
+    <img src="photo.jpg">
+  </div>
+
+  <div class="content">
+    <h1>Happy Birthday, My Love ❤️</h1>
+    <p>
+      Divya, on your special day, I just want you to know how deeply you are loved.
+      You are not just my girlfriend, you are my peace, my strength, and my happiest place.
+      Your presence turns ordinary days into something magical, and every smile of yours makes my world brighter.
+      <br><br>
+      With you, I’ve learned what true happiness feels like, and what love truly means.
+      May this year bring you endless smiles, beautiful dreams, and everything your heart desires.
+      <br><br>
+      I promise to stand by you, celebrate you, and love you—today and always.
+      <br><br>
+      <b>Forever yours 💫</b>
+    </p>
+  </div>
+</div>
+
+<script>
+for(let i=0;i<25;i++){
+  let p=document.createElement("div");
+  p.className="petal";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=5+Math.random()*5+"s";
+  document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
